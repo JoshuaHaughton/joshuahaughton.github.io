@@ -25,7 +25,7 @@
     <section id="landing-page">
       <nav>
         <figure>
-          <img id="personal-logo" src="./assets/logo.svg" alt="" />
+          <img id="personal-logo" src="./assets/logo.svg" alt="Josh Haughton Logo" />
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link">
@@ -48,7 +48,7 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="
@@ -79,7 +79,7 @@
             development and user experience into a career as a
             <b class="secondary">Frontend Software Engineer.</b>
             <br />
-            Here's a bit more <b class="secondary">about me:</b>
+            Here's a bit more <b class="secondary click" onclick="toggleModal()">about me:</b>
           </p>
           <div class="social__list">
             <a
@@ -106,7 +106,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fas fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -118,7 +118,7 @@
             Here's a bit about me.
           </h3>
           <h4 class="modal__sub-title modal__sub-title--about">
-            Frontend Software Engineer
+            Fullstack Software Engineer
           </h4>
           <p class="modal__para">
             I'm a 21 year-old
@@ -178,11 +178,20 @@
                 alt="Node Logo"
                 class="modal__language--img"
               />
-              <span class="language__name">Node.js</span>
+              <span class="language__name">Node/Express</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"
+                alt="PostgreSQL Logo"
+                class="modal__language--img"
+              />
+              <span class="language__name">PostgreSQL</span>
             </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities.
@@ -216,7 +225,6 @@
             Thanks for the message! Looking forward to speaking with you soon.
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">

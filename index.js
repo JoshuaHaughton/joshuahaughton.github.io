@@ -30,3 +30,14 @@ const contact = (event) => {
       );
     });
 };
+
+let isModalOpen = false;
+
+const toggleModal = () => {
+
+  isModalOpen ? 
+  document.body.classList.remove("modal--open") :
+  document.body.classList += " modal--open";
+
+  isModalOpen = !isModalOpen;
+}
