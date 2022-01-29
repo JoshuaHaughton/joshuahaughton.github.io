@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joshua Haughton</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_Nv7IGGmuawZuYuuauHS6i");
+      })();
+    </script>
   </head>
   <body>
     <section id="landing-page">
@@ -62,7 +72,7 @@
       </nav>
       <header class="header">
         <div class="header__content">
-          <h1 class="title">Hey, </h1>
+          <h1 class="title">Hey,</h1>
           <h1 class="title secondary">I'm Josh.</h1>
           <p class="header__para">
             I'm a digital marketer looking to transition my passion for frontend
@@ -111,57 +121,93 @@
             Frontend Software Engineer
           </h4>
           <p class="modal__para">
-            I'm a 21 year-old <span class="secondary bold">fullstack software engineer</span> with a passion for building apps and websites with an exceptional <span class="secondary bold">user experience.</span>
-            <br/>
-            I currently work as a freelance digital marketer, but I spend every chance I get upgrading my coding skills. 
-            <br/>
-            <br/>
-            The<span class="secondary bold"> copywriting, user-based design,</span> and <span class="secondary bold">customer psychology skills</span> I've acquired through marketing for E-Commerce brands have been essential in allowing me to quickly learn how to craft interfaces that are extremely visually appealing to users.
+            I'm a 21 year-old
+            <span class="secondary bold">fullstack software engineer</span> with
+            a passion for building apps and websites with an exceptional
+            <span class="secondary bold">user experience.</span>
+            <br />
+            I currently work as a freelance digital marketer, but I spend every
+            chance I get upgrading my coding skills.
+            <br />
+            <br />
+            The<span class="secondary bold">
+              copywriting, user-based design,</span
+            >
+            and
+            <span class="secondary bold">customer psychology skills</span> I've
+            acquired through marketing for E-Commerce brands have been essential
+            in allowing me to quickly learn how to craft interfaces that are
+            extremely visually appealing to users.
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="Html Logo" class="modal__language--img">
-            <span class="language__name">HTML</span>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt="Html Logo"
+                class="modal__language--img"
+              />
+              <span class="language__name">HTML</span>
             </figure>
             <figure class="modal__language">
-              <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo" class="modal__language--img">
-            <span class="language__name">CSS</span>
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt="CSS Logo"
+                class="modal__language--img"
+              />
+              <span class="language__name">CSS</span>
             </figure>
             <figure class="modal__language">
-              <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript Logo" class="modal__language--img">
-            <span class="language__name">JavaScript</span>
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt="JavaScript Logo"
+                class="modal__language--img"
+              />
+              <span class="language__name">JavaScript</span>
             </figure>
             <figure class="modal__language">
-              <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo" class="modal__language--img">
-            <span class="language__name">React</span>
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt="React Logo"
+                class="modal__language--img"
+              />
+              <span class="language__name">React</span>
             </figure>
             <figure class="modal__language">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png" alt="Node Logo" class="modal__language--img">
-            <span class="language__name">Node.js</span>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png"
+                alt="Node Logo"
+                class="modal__language--img"
+              />
+              <span class="language__name">Node.js</span>
             </figure>
           </div>
         </div>
         <div class="modal__half modal__contact">
-          <h3 class="modal__title modal__title--contact">
-            Let's have a chat!
-          </h3>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities.
           </h4>
-          <form action="" id="contact__form">
+          <form action="" id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input type="text" class="input" name="user_name" required>
+              <input type="text" class="input" name="user_name" required />
             </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input type="email" class="input" name="user_email" required></input>
+              <input type="email" class="input" name="user_email" required />
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
-              <textarea type="text" class="input" name="message" required></textarea>
+              <textarea
+                type="text"
+                class="input"
+                name="message"
+                required
+              ></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">Send it my way</button>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner"></i>
@@ -274,8 +320,7 @@
               target="_blank"
               class="
                 footer__social--link
-                link__hover-effect 
-                link__hover-effect--white
+                link__hover-effect link__hover-effect--white
               "
               >Github</a
             >
@@ -284,8 +329,7 @@
               target="_blank"
               class="
                 footer__social--link
-                link__hover-effect 
-                link__hover-effect--white
+                link__hover-effect link__hover-effect--white
               "
               >LinkedIn</a
             >
@@ -294,8 +338,7 @@
               target="_blank"
               class="
                 footer__social--link
-                link__hover-effect 
-                link__hover-effect--white
+                link__hover-effect link__hover-effect--white
               "
               >Contact</a
             >
@@ -304,8 +347,7 @@
               target="_blank"
               class="
                 footer__social--link
-                link__hover-effect 
-                link__hover-effect--white
+                link__hover-effect link__hover-effect--white
               "
               >Resume</a
             >
