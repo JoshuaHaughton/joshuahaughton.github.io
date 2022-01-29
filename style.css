@@ -165,6 +165,10 @@ nav,
     color: white;
 }
 
+.dark-theme .secondary {
+  color: #1e78ff;
+}
+
 .dark-theme section {
   background-color: #242424;
 }
@@ -707,6 +711,8 @@ footer {
 .shape--0 {
   top: 15vh;
   left: 5vw;
+  color: blue;
+  filter: contrast(-160%);
 }
 
 .shape--1 {
@@ -726,25 +732,20 @@ footer {
 
 .shape--4 {
   top: 50vh;
-  left: 50vw;
-}
-
-.shape--5 {
-  top: 50vh;
   left: 80vw;
 }
 
-.shape--6 {
+.shape--5 {
   top: 80vh;
   left: 5vw;
 }
 
-.shape--7 {
+.shape--6 {
   top: 80vh;
   left: 50vw;
 }
 
-.shape--8 {
+.shape--7 {
   top: 80vh;
   left: 80vw;
 }
