@@ -1,8 +1,14 @@
-// template_sbg618g
+let isModalOpen = false;
+let contrastToggle = false;
 
-// service_3ke2bn5
-
-// user_Nv7IGGmuawZuYuuauHS6i
+const toggleContrast = () => {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList += " dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+};
 
 const contact = (event) => {
   event.preventDefault();
@@ -31,13 +37,10 @@ const contact = (event) => {
     });
 };
 
-let isModalOpen = false;
-
 const toggleModal = () => {
-
-  isModalOpen ? 
-  document.body.classList.remove("modal--open") :
-  document.body.classList += " modal--open";
+  isModalOpen
+    ? document.body.classList.remove("modal--open")
+    : (document.body.classList += " modal--open");
 
   isModalOpen = !isModalOpen;
-}
+};

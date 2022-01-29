@@ -12,6 +12,7 @@ li {
 
 section {
   background-color: rgb(245, 245, 245);
+  transition: all 300ms ease;
 }
 
 .container {
@@ -37,6 +38,10 @@ section {
   color: #0d4ae5;
   /* color: #0066ff; */
   /* might do this blue instead */
+}
+
+.black {
+  color: black;
 }
 
 .bold {
@@ -93,8 +98,8 @@ input:focus, textarea:focus {
 
 textarea {
   resize: vertical;
-  height: 100px;
-  margin-top: 24px;
+  height: 64px;
+  margin-top: 16px;
 }
 
 .label {
@@ -145,6 +150,41 @@ nav,
   visibility: hidden;
   transition: all 400ms;
 
+}
+
+.dark-theme .black, 
+.dark-theme .section__title, 
+.dark-theme .section__sub-title, 
+.dark-theme .nav__link--anchor, 
+.dark-theme .fa-adjust, 
+.dark-theme .header__para {
+    color: white;
+}
+
+.dark-theme section {
+  background-color: #242424;
+}
+
+.dark-theme #personal-logo {
+  filter: invert(1);
+}
+
+.dark-theme .scroll__icon {
+  border-color: #fff;
+}
+
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--black:after {
+  background-color: #fff;
+}
+
+.dark-theme .link__hover-effect--white:after {
+  background-color: #242424;
+}
+
+.dark-theme .mail__btn {
+  background-color: #fff;
+  color: #242424;
 }
 
 
@@ -340,7 +380,7 @@ nav {
 
 .modal__about {
   background-color: rgb(245, 245, 245);
-  margin-top: 64px;
+  padding-top: 80px;
   transform: translateX(-110%);
 }
 
@@ -383,7 +423,7 @@ nav {
 .modal__contact {
   background-color: #242424;
   color: white;
-  padding-bottom: 108px;
+  padding-bottom: 176px;
   transform: translateX(110%);
 }
 
