@@ -541,11 +541,11 @@ nav {
   z-index: 101;
 }
 
-.descriptionHover {
+.header__description--hover {
   transition: all 300ms ease;
 }
 
-.descriptionHover:hover {
+.header__description--hover:hover {
   cursor: pointer;
   color: blue;
   font-size: 24.9px;
@@ -800,7 +800,7 @@ footer {
   .header__para {
     font-size: 20px;
   }
-  .descriptionHover:hover {
+  .header__description--hover:hover {
     cursor: pointer;
     color: blue;
     font-size: 20.9px;
@@ -876,7 +876,7 @@ footer {
     font-size: 18px;
   }
 
-  .descriptionHover:hover {
+  .header__description--hover:hover {
     cursor: pointer;
     color: blue;
     font-size: 18.9px;
